@@ -1,0 +1,567 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: white;
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+}
+
+/* Main title header */
+.main-title {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4a90e2;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0;
+  color: white;
+  position: relative;
+}
+
+.semester-header {
+  background-color: #003366;
+  color: white;
+  padding: 15px 0;
+  position: relative;
+  width: 100%;
+}
+
+.semester-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Standardized home button styling for both pages */
+.home-button {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #004080;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block; /* Override the previous display: none */
+}
+
+/* Add these styles to your globals.css */
+.site-title {
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Global section */
+.section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* ESIN Archive header */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: #4a90e2;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Archive link */
+.archive-link {
+  display: inline-block;
+  background-color: #4a90e2;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.archive-link:hover {
+  background-color: #3b7dc8;
+}
+
+/* Semester list */
+.semester-list {
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto 16px;
+}
+
+.semester-item {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #1a1a1a;
+}
+
+.semester-info {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* View link */
+.view-link {
+  background-color: #003366;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.view-link:hover {
+  background-color: #004080;
+}
+
+/* Admin link */
+.admin-link-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.admin-link {
+  color: #0070f3;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+/* Semester page specific styles */
+.semester-header {
+            background-color: #1c64b6;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin: 0; 
+        }
+
+.semester-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-buttons {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Remove the home button styling since we're using the title as a link */
+.home-button {
+  display: none;
+}
+
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: white;
+  color: #004080;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.home-button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+.archive-button {
+  background-color: #2676d2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+
+.archive-button:hover {
+  background-color: #1c64b6;
+  transform: scale(1.05);
+}
+
+.subject-section {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #1a1a1a;
+  text-align: left;
+}
+
+.subject-section h3 {
+  margin: 0 0 15px;
+  color: #004080;
+  font-size: 1.25rem;
+}
+
+.file-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  transition: all 0.6s;
+}
+
+.file-item:hover {
+  transform: scale(1.005);
+}
+
+.file-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.file-indicator.available {
+  background-color: #4CAF50; /* Green */
+}
+
+.file-indicator.unavailable {
+  background-color: #F44336; /* Red */
+}
+
+.file-link {
+  color: #1088ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.file-link:hover {
+  text-decoration: underline;
+}
+
+/* Add these styles to your globals.css file */
+
+/* Updated styles for subject titles */
+.subject-title, 
+h3.subject-title, 
+.subject-section h3 {
+  color: white !important; /* Force white color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important; /* Different font */
+  font-weight: 500 !important; /* Medium weight */
+  font-size: 1.5rem !important; /* Increased size from 1.25rem */
+}
+
+/* More specific selector for the subject titles in the semester page */
+.subject-section h3 {
+  margin: 0 0 15px;
+  color: white !important; /* Override the #004080 color */
+}
+
+/* Target any links within subject titles */
+.subject-title a, 
+.subject-section h3 a {
+  color: white !important;
+  text-decoration: none;
+  font-size: 1.5rem !important; /* Ensure links inside titles also have increased size */
+}
+
+
+/* Button styles for lessons and folders */
+.preview-button {
+  background: none;
+  border: none;
+  color: #1088ff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px 0;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.preview-button:hover {
+  text-decoration: underline;
+}
+
+.lesson-button {
+  color: #1088ff;
+}
+
+.folder-button {
+  color: #ff8c00;
+}
+
+.folder-icon, .lesson-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+/* Shared control buttons used in the previewer */
+.copy-text-button,
+.gdrive-button,
+.download-button,
+.ai-button,
+.notepad-button,
+.close-button,
+.drawpad-button,
+.ocr-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease; /* unified progressive hover animations */
+  will-change: transform;
+}
+
+/* Unified hover effect for all previewer buttons */
+.copy-text-button:hover,
+.gdrive-button:hover,
+.download-button:hover,
+.ai-button:hover,
+.notepad-button:hover,
+.close-button:hover,
+.drawpad-button:hover,
+.ocr-button:hover {
+  transform: translateY(-1px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+.copy-text-button { background-color: #ff8c00; color: white; }
+.copy-text-button:hover { background-color: #e67e22; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+.gdrive-button { background-color: #2676d2; color: white; }
+.gdrive-button:hover { background-color: #1c64b6; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+.download-button { background-color: #60a5fa; color: white; }
+.download-button:hover { background-color: #3a80d2; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+.ai-button { background-color: #6a3093; color: white; }
+.ai-button:hover { background-color: #7a3fa3; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+.close-button { background-color: #e25c5c; color: white; }
+.close-button:hover { filter: brightness(1.05); transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+/* MusicDestroyer styles */
+.panel {
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid #0f141b;
+  background-color: rgb(15 20 27 / 0.75);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #121820;
+  border: 1px solid #1f2937;
+  transition: background-color 0.2s ease;
+}
+.btn:hover { background-color: #18202a; }
+.btn-primary {
+  color: #000000;
+  background-color: #00E7FF;
+  box-shadow: 0 0 0 1px rgba(0, 231, 255, 0.35), 0 0 16px rgba(0, 231, 255, 0.25);
+}
+.btn-primary:hover { filter: brightness(1.1); }
+
+.grid-label {
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+.accent-ring {
+  box-shadow: 0 0 0 1px rgba(0, 231, 255, 0.25), 0 0 12px rgba(0, 231, 255, 0.18);
+}
+
+.shimmer { position: relative; overflow: hidden; }
+.shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  animation: shimmer 1.8s infinite;
+}
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+/* PDF preview layout */
+.pdf-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+}
+
+.pdf-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.pdf-nav-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pdf-nav-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Notepad floating panel used on semester pages */
+.notepad-container {
+  position: fixed; /* Allow dragging within viewport */
+  z-index: 1100;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 420px;
+  max-width: 95vw;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+.notepad-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px; /* compact like mini drawpad */
+  background-color: #2a2a2a;
+  border-bottom: 1px solid #444;
+  color: white;
+  cursor: move; /* Indicate draggable header */
+}
+
+.notepad-header h4 {
+  margin: 0;
+  font-size: 12px; /* compact */
+}
+
+.notepad-controls { display: flex; gap: 4px; /* compact */ }
+
+.fullscreen-button { background-color: #4a90e2; color: white; }
+.fullscreen-button:hover { background-color: #3a80d2; }
+
+.save-button { background-color: #50c878; color: white; }
+.save-button:hover { background-color: #3da05e; }
+
+/* Reuse .close-button styles above */
+
+.notepad-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 10px;
+  background-color: #2a2a2a;
+  border: none;
+  color: white;
+  resize: none;
+}
+
+
+
+.notepad-button { background-color: #50c878; color: white; }
+.notepad-button:hover { background-color: #3da05e; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+.drawpad-button { background-color: #064e3b; color: white; }
+.drawpad-button:hover { background-color: #0a6b52; }
+.ocr-button { background-color: #2563eb; color: white; }
+.ocr-button:hover { background-color: #1d4ed8; transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+/* Previewer controls container spacing */
+.previewer-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* more space between buttons */
+  flex-wrap: wrap; /* allow buttons to wrap on small screens */
+}
+
+/* Keep Close button always visible by anchoring it to the end and preventing shrink */
+.close-button { background-color: #e25c5c; color: white; margin-left: auto; flex-shrink: 0; white-space: nowrap; }
+.close-button:hover { filter: brightness(1.05); transform: translateY(-1px) scale(1.03); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+
+/* Playlist drawer styles */
+.playlist-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 280px;
+  transform: translateX(-100%);
+  transition: transform 200ms ease-in-out;
+  z-index: 40;
+  background: rgba(15,20,27,0.95);
+  border-right: 1px solid rgba(0, 231, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+.playlist-drawer.open { transform: translateX(0); }
+.playlist-header { border-bottom: 1px solid rgba(0, 231, 255, 0.2); }
+.playlist-list { flex: 1; }
+.playlist-item { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.playlist-item.current { background: rgba(0, 231, 255, 0.08); }
+.playlist-item.disabled { opacity: 0.6; cursor: not-allowed; }
+
+@media (max-width: 768px) {
+  .playlist-drawer { width: 85vw; }
+}

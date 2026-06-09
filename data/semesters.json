@@ -1,0 +1,94 @@
+{
+  "semesters": [
+    {
+      "id": "1",
+      "title": "Semester 1",
+      "subjects": []
+    },
+    {
+      "id": "2",
+      "title": "Semester 2",
+      "subjects": []
+    },
+    {
+      "id": "3",
+      "title": "Semester 3",
+      "subjects": []
+    },
+    {
+      "id": "4",
+      "title": "Semester 4",
+      "subjects": []
+    },
+    {
+      "id": "5",
+      "title": "Semester 5",
+      "subjects": []
+    },
+    {
+      "id": "6",
+      "title": "Semester 6",
+      "subjects": []
+    },
+    {
+      "id": "s7_bigdata_ai",
+      "title": "S7 - Big Data & AI",
+      "subjects": []
+    },
+    {
+      "id": "s7_cybersecurity",
+      "title": "S7 - Cybersecurity",
+      "subjects": []
+    },
+    {
+      "id": "s7_cloud",
+      "title": "S7 - Cloud",
+      "subjects": []
+    },
+    {
+      "id": "s7_software",
+      "title": "S7 - Software Engineering",
+      "subjects": []
+    },
+    {
+      "id": "s8_bigdata_ai",
+      "title": "S8 - Big Data & AI",
+      "subjects": []
+    },
+    {
+      "id": "s8_cybersecurity",
+      "title": "S8 - Cybersecurity",
+      "subjects": []
+    },
+    {
+      "id": "s8_cloud",
+      "title": "S8 - Cloud",
+      "subjects": []
+    },
+    {
+      "id": "s8_software",
+      "title": "S8 - Software Engineering",
+      "subjects": []
+    },
+    {
+      "id": "s9_bigdata_ai",
+      "title": "S9 - Big Data & AI",
+      "subjects": []
+    },
+    {
+      "id": "s9_cybersecurity",
+      "title": "S9 - Cybersecurity",
+      "subjects": []
+    },
+    {
+      "id": "s9_cloud",
+      "title": "S9 - Cloud",
+      "subjects": []
+    },
+    {
+      "id": "s9_software",
+      "title": "S9 - Software Engineering",
+      "subjects": []
+    }
+  ]
+}

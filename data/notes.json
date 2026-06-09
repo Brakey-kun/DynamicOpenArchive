@@ -1,0 +1,17 @@
+{
+  "title": "Development Notes",
+  "lastUpdated": "2026-06-09",
+  "version": "v1.0.0",
+  "topnote": [
+    "Welcome to the Dynamic Open Archive platform!"
+  ],
+  "sections": [
+    {
+      "title": "Getting Started",
+      "items": [
+        "This is a fresh installation of the Dynamic Open Archive platform.",
+        "Customize semesters.json in the data folder to add your own subjects and resources."
+      ]
+    }
+  ]
+}
