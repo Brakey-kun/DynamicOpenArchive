@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login
+Allow: /
+
+# Optional: point to sitemap if available
+# Sitemap: https://example.com/sitemap.xml
