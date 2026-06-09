@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/DynamicOpenArchive',
+  images: {
+    unoptimized: true,
+  },
   // Reduce noisy webpack cache restoration warnings in development
   webpack: (config, { dev }) => {
     if (dev) {
