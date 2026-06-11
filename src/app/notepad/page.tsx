@@ -524,7 +524,7 @@ export default function Notepad() {
           <button onClick={() => fileInputRef.current?.click()}>Import</button>
           <button onClick={() => { setShowSave(true); setSaveMsg('') }} title="Save / Export (Ctrl+S)">💾 Save</button>
           <button onClick={() => setShowFind(v => !v)} title="Find & Replace (Ctrl+F)">🔍 Find</button>
-          <button onClick={() => (window.location.href = '/')}>Home</button>
+          <button onClick={() => (window.location.href = '/DynamicOpenArchive/')}>Home</button>
           <input
             ref={fileInputRef}
             type="file"

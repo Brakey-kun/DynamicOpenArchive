@@ -94,7 +94,7 @@ export default function ClientBackendMock() {
             const local = localStorage.getItem(`mock_data_${name}`);
             if (local) return jsonResponse(JSON.parse(local));
             
-            const fallbackPath = name === 'parameters' ? '/settings/parameters.json' : `/data/${name}.json`;
+            const fallbackPath = name === 'parameters' ? '/DynamicOpenArchive/settings/parameters.json' : `/DynamicOpenArchive/data/${name}.json`;
             const staticRes = await originalFetch(fallbackPath);
             if (staticRes.ok) {
               const data = await staticRes.json();
@@ -116,7 +116,7 @@ export default function ClientBackendMock() {
             const local = localStorage.getItem('mock_data_notes');
             if (local) return jsonResponse(JSON.parse(local));
             
-            const staticRes = await originalFetch('/data/notes.json');
+            const staticRes = await originalFetch('/DynamicOpenArchive/data/notes.json');
             if (staticRes.ok) {
               const data = await staticRes.json();
               localStorage.setItem('mock_data_notes', JSON.stringify(data));
@@ -135,7 +135,7 @@ export default function ClientBackendMock() {
           const local = localStorage.getItem('mock_data_semesters');
           if (local) return jsonResponse(JSON.parse(local));
           
-          const staticRes = await originalFetch('/data/semesters.json');
+          const staticRes = await originalFetch('/DynamicOpenArchive/data/semesters.json');
           if (staticRes.ok) {
             const data = await staticRes.json();
             localStorage.setItem('mock_data_semesters', JSON.stringify(data));
@@ -162,7 +162,7 @@ export default function ClientBackendMock() {
               const parsed = JSON.parse(local);
               return Array.isArray(parsed) ? parsed : (parsed?.semesters || []);
             }
-            const staticRes = await originalFetch('/data/semesters.json');
+            const staticRes = await originalFetch('/DynamicOpenArchive/data/semesters.json');
             if (staticRes.ok) {
               const parsed = await staticRes.json();
               return Array.isArray(parsed) ? parsed : (parsed?.semesters || []);
@@ -202,6 +202,47 @@ export default function ClientBackendMock() {
         if (apiPath === '/api/admin/semesters' && method === 'PUT') {
           localStorage.setItem('mock_data_semesters', JSON.stringify(body));
           return jsonResponse({ success: true });
+        }
+        
+        // Mock Snakegame configuration
+        if (apiPath === '/api/snakegame' && method === 'GET') {
+          return jsonResponse({
+            initialSpeed: 400,
+            maxApples: 8,
+            objectTypes: {
+              apple: {
+                points: 1,
+                color: '#FF0000',
+                maxOnScreen: 8,
+                spawnRate: 0.8,
+                lifespan: { min: 8000, max: 15000 }
+              },
+              obstacle: {
+                color: '#0000FF',
+                maxOnScreen: 5,
+                spawnRate: 0.5,
+                lifespan: { min: 10000, max: 20000 }
+              },
+              lethalObstacle: {
+                color: '#FFA500',
+                maxOnScreen: 2,
+                spawnRate: 0.2,
+                lifespan: { min: 5000, max: 12000 }
+              },
+              diamondApple: {
+                points: 1.3,
+                color: '#00BFFF',
+                maxOnScreen: 1,
+                spawnRate: 0.1,
+                lifespan: { min: 4000, max: 8000 }
+              }
+            },
+            difficultyLevels: [
+              { score: 0, speed: 150, spawnMultiplier: 1 },
+              { score: 50, speed: 100, spawnMultiplier: 2 },
+              { score: 100, speed: 80, spawnMultiplier: 2.5 }
+            ]
+          });
         }
         
         return jsonResponse({ error: 'Not implemented client-side' }, 501);

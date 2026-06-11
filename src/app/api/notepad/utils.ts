@@ -238,7 +238,7 @@ export const generateNotepadHTML = (notepadId: string, fileName: string, content
           // Add event listeners
           downloadButton.addEventListener('click', downloadContent);
           homeButton.addEventListener('click', () => {
-            window.location.href = '/';
+            window.location.href = '/DynamicOpenArchive/';
           });
           
           // Auto-save periodically

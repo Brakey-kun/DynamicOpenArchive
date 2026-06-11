@@ -329,23 +329,23 @@ export default function HomePage() {
         <h2>Useful Tools / Links</h2>
         <div className="tools-grid">
           {/* App buttons at the top */}
-          <a href="/notepad" className="tool-card">
+          <Link href="/notepad" className="tool-card">
             Notepad
-          </a>
-          <a
+          </Link>
+          <Link
             className="tool-card"
             href="/drawpad"
           >
             Drawpad
-          </a>
+          </Link>
           <button className="tool-card" onClick={fetchDevNotes}>
             Dev Notes
           </button>
 
           {/* Link buttons after them */}
-          <a href="/games" className="tool-card" target="_blank" rel="noopener noreferrer">
+          <Link href="/games" className="tool-card" target="_blank" rel="noopener noreferrer">
             Games and Extras
-          </a>
+          </Link>
           <a href="https://drive.google.com/drive/folders/11WJHRKmG4jKrcgWr_OTflGSMI2ZqX7II?usp=drive_link" className="tool-card" target="_blank" rel="noopener noreferrer">
             Extra Documents and Books
           </a>

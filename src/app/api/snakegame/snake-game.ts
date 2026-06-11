@@ -289,7 +289,7 @@ private handlePauseMenuSelection() {
     case 2: // Exit Game
       // Close the game and return to the main page
       this.destroy();
-      window.location.href = '/'; // Navigate to home page
+      window.location.href = '/DynamicOpenArchive/'; // Navigate to home page
       break;
   }
 }

@@ -447,7 +447,7 @@ export default function SemesterPage({ params }: { params: { id: string } }) {
     // If normalized differs, redirect to normalized URL for consistency
     if (normalizedId !== params.id) {
       // Update URL without full reload
-      window.history.replaceState({}, '', `/semester/${normalizedId}${window.location.hash || ''}`);
+      window.history.replaceState({}, '', `/DynamicOpenArchive/semester/${normalizedId}/${window.location.hash || ''}`);
     }
 
     fetchData(normalizedId);

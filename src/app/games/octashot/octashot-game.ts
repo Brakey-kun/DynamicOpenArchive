@@ -755,7 +755,7 @@ export class OctaShotGame {
     else if (opt === 'Restart') { this.reset(); this.paused = false; }
     else if (opt === 'Main Menu') {
       const s = loadSave(); s.level = 1; s.hp = this.p.maxHp; s.maxHp = this.p.maxHp; s.stats = this.stats; s.selectedSkin = this.p.skin; s.sniperUses = this.p.sniperUses; s.difficulty = this.difficulty; saveLS(s);
-      this.destroy(); window.location.href = '/games/octashot';
+      this.destroy(); window.location.href = '/DynamicOpenArchive/games/octashot/';
     }
   }
 

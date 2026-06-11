@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/DynamicOpenArchive',
+  trailingSlash: true,
   images: {
     unoptimized: true,
   },
