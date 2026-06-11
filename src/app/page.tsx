@@ -520,7 +520,7 @@ export default function HomePage() {
           grid-auto-rows: 120px;
         }
 
-        .tool-card {
+        :global(.tool-card) {
           background-color: #1e1e1e;
           padding: 12px;
           border-radius: 10px;
@@ -540,7 +540,7 @@ export default function HomePage() {
           box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        .tool-card:hover {
+        :global(.tool-card:hover) {
           background-color: #2a2a2a;
           transform: scale(1.05);
         }
