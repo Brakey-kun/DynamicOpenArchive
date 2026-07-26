@@ -17,7 +17,6 @@ The website acts as a central portal to browse documents and assets, but instead
     *   *Flashcards*: Create and study cards for quick memorization.
     *   *Mini Games*: Custom Snake game, OctaShot, and Music Destroyer to take a quick study break.
 *   **Feedback System**: Users can easily drop comments or request specific files.
-*   **Secrets & Easter Eggs**: A couple of hidden surprises if you click around! 😉
 
 ## 🛠️ Running it locally
 
