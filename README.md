@@ -5,9 +5,9 @@ A simple, dynamic archive platform built to help students store, view, and organ
 This is the open-source codebase of the live portal, which is hosted at [n-informatique.top](https://www.n-informatique.top/).
 
 
-## 🚀 What it does
+## Objectives and Features
 
-It's a central portal where you can browse documents and assets, but instead of just being a boring file list, it comes with a complete set of widgets:
+The website acts as a central portal to browse documents and assets, but instead of just being a boring file list, it comes with a complete set of widgets:
 
 *   **Interactive File Explorer**: Easily navigate folders and preview PDF, Word, or other documents right in the browser.
 *   **OCR Reader (Text Extractor)**: Can't copy text from a scanned document or slide? There's a built-in scanner to extract text instantly.
